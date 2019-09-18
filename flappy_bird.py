@@ -3,9 +3,7 @@ import random
 import os
 import time
 import neat
-from game_objects import Bird
-from game_objects import Pipe
-from game_objects import Base
+from game_objects import Bird, Pipe, Base
 import game_objects as game
 
 
@@ -86,7 +84,7 @@ def eval_genomes(genomes, config):
 
     run = True
     while run and len(birds) > 0:
-        clock.tick(30)
+        clock.tick(120)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -148,12 +146,6 @@ def eval_genomes(genomes, config):
                 birds.pop(birds.index(bird))
 
         draw_window(game.WIN, birds, pipes, base, score, gen, pipe_ind)
-
-        # break if score gets large enough
-        '''if score > 20:
-            pickle.dump(nets[0],open("best.pickle", "wb"))
-            break'''
-
 
 def run(config_file):
     """
