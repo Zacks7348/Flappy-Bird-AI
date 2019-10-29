@@ -1,3 +1,10 @@
+"""
+Flappy Bird made with pygame in Python
+Uses NEAT AI
+
+Date Modified:  September 18, 2019
+Author: Zacks7348
+"""
 import pygame
 import random
 import os
